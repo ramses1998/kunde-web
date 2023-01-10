@@ -15,6 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+import { RouterLinkActive, RouterLinkWithHref } from '@angular/router';
 import { Component } from '@angular/core';
 import log from 'loglevel';
 
@@ -22,6 +23,7 @@ import log from 'loglevel';
     selector: 'hs-home',
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss'],
+    imports: [RouterLinkActive, RouterLinkWithHref],
     standalone: true,
 })
 export class HomeComponent {

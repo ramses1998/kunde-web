@@ -26,10 +26,19 @@ import { TortendiagrammComponent } from './diagramme/tortendiagramm.component';
 import { UpdateBuchComponent } from './update-buch/update-buch.component';
 import { canDeactivateGuard } from './create-buch/create-deactivate.guard';
 import { isAdminGuard } from '../auth/isAdmin.guard';
+// eslint-disable-next-line sort-imports
+import { KundenListeComponent } from './kunden-liste/kunden-liste.component';
 
 // Route-Definitionen fuer das Feature-Modul "buch":
 // Zuordnung von Pfaden und Komponenten mit HTML-Templates
 export const ROUTES: Routes = [
+    // Neue
+    {
+        path: 'kunden',
+        component: KundenListeComponent,
+        title: 'Kundenliste',
+    },
+    //
     {
         path: 'suche',
         component: SucheBuecherComponent,

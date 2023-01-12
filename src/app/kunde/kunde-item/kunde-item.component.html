@@ -1,12 +1,9 @@
 <div>
   <a routerLink="/kunden/alle" style="text-decoration: none">
-    <div style="font-size: 16px; color: #007fff">
-      < Zurück zur Kundenliste
-    </div>
+    <div style="font-size: 16px; color: #007fff">< Zurück zur Kundenliste</div>
   </a>
   <div id="page-title" style="margin-top: -7px">Kundendetails</div>
 </div>
-
 
 <div *ngFor="let field of fieldListData">
   <div id="field-container">
@@ -14,4 +11,3 @@
     <div id="value">{{ field[1] }}</div>
   </div>
 </div>
-

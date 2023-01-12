@@ -7,7 +7,12 @@ import {
     RouterLinkActive,
     RouterLinkWithHref,
 } from '@angular/router';
-import { Familienstand, GeschlechtType, Kunde, KundeShared} from '../shared/kunde';
+import type {
+    Familienstand,
+    GeschlechtType,
+    Kunde,
+    KundeShared,
+} from '../shared/kunde';
 import { KundeReadService } from '../shared/kundeRead.service';
 import { KundeWriteService } from '../shared/kundeWriteService';
 import log from 'loglevel';

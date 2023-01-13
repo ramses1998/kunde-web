@@ -15,7 +15,7 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 
-<div class="mt-5" style="display: grid; grid-gap: 20px; max-width: 30vw">
+<div class="mt-5" id="page-header-container">
   <div style="color: #007fff; font-size: 40px; line-height: 50px">
     Willkommen zur Software von Verwaltung von Kunden
   </div>
@@ -23,24 +23,16 @@
     Verwalten Sie mit unserer Softwarelösung Ihre Kundendaten effizienter und
     blicken Sie klarer in die Zukunft.
   </div>
-  <div
-    style="
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 20px;
-      justify-self: start;
-    "
-  >
-    <button class="btn btn-outline-primary">
-      <div style="font-weight: 550">Zur Kundenliste</div>
-    </button>
-    <a
-      routerLink="/buecher/suche"
-    >
+  <div id="page-header-button-container">
+    <a routerLink="kunden/alle">
+      <button class="btn btn-outline-primary">
+        <div style="font-weight: 550">Zur Kundenliste</div>
+      </button>
+    </a>
+    <a routerLink="kunden/alle">
       <button class="btn btn-primary">
         <div style="font-weight: 550">Nach Kunden suchen</div>
       </button>
-
     </a>
   </div>
 </div>
@@ -48,38 +40,42 @@
 <div id="cards-container">
   <div class="card-item">
     <div class="card-thumbnail">
-      <img alt="card-thumbnail" src="./assets/icons/icon-72x72.png"/>
+      <img alt="card-thumbnail" src="./assets/icons/icon-72x72.png" />
     </div>
     <div class="card-title">Behalten Sie den Überblick</div>
     <div class="card-content-text">
-      Mit der Kundenliste haben Sie den Überblick über alle Kunden Ihres Geschäfts
+      Mit der Kundenliste haben Sie den Überblick über alle Kunden Ihres
+      Geschäfts
     </div>
   </div>
   <div class="card-item">
     <div class="card-thumbnail">
-      <img alt="card-thumbnail" src="./assets/icons/icon-72x72.png"/>
+      <img alt="card-thumbnail" src="./assets/icons/icon-72x72.png" />
     </div>
     <div class="card-title">Kundendaten lesen</div>
     <div class="card-content-text">
-      Mit der Kundenliste haben Sie den Überblick über alle Kunden Ihres Geschäfts
+      Mit der Kundenliste haben Sie den Überblick über alle Kunden Ihres
+      Geschäfts
     </div>
   </div>
   <div class="card-item">
     <div class="card-thumbnail">
-      <img alt="card-thumbnail" src="./assets/icons/icon-72x72.png"/>
+      <img alt="card-thumbnail" src="./assets/icons/icon-72x72.png" />
     </div>
     <div class="card-title">Kundendaten bearbeiten</div>
     <div class="card-content-text">
-      Mit der Kundenliste haben Sie den Überblick über alle Kunden Ihres Geschäfts
+      Mit der Kundenliste haben Sie den Überblick über alle Kunden Ihres
+      Geschäfts
     </div>
   </div>
   <div class="card-item">
     <div class="card-thumbnail">
-      <img alt="card-thumbnail" src="./assets/icons/icon-72x72.png"/>
+      <img alt="card-thumbnail" src="./assets/icons/icon-72x72.png" />
     </div>
     <div class="card-title">Suchen</div>
     <div class="card-content-text">
-      Mit der Kundenliste haben Sie den Überblick über alle Kunden Ihres Geschäfts
+      Mit der Kundenliste haben Sie den Überblick über alle Kunden Ihres
+      Geschäfts
     </div>
   </div>
 </div>

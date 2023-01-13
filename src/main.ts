@@ -31,7 +31,7 @@ if (environment.production) {
 bootstrapApplication(AppComponent, {
     providers: [
         // "should not be used in component injectors"
-        importProvidersFrom(RouterModule.forRoot(ROUTES)),
+        importProvidersFrom(RouterModule.forRoot(ROUTES), BrowserAnimationsModule),
         // ab Angular 15
         provideHttpClient(),
         importProvidersFrom(BrowserAnimationsModule),

@@ -1,0 +1,151 @@
+<div class="mb-lg-5">
+  <a routerLink="/kunden/alle" style="text-decoration: none">
+    <div style="font-size: 16px; color: #007fff">< Zurück zur Kundenliste</div>
+  </a>
+  <div id="page-title" class="mb-5" style="margin-top: -7px">
+    Kundendaten bearbeiten
+  </div>
+
+  <div class="mb-3">
+    <label for="nachname" class="form-label">Kundenname</label>
+    <input
+      [value]="kundeForUpdate.nachname"
+      type="text"
+      class="form-control"
+      id="nachname"
+      placeholder="Kundename"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label">E-mail</label>
+    <input
+      [value]="kundeForUpdate.email"
+      type="email"
+      class="form-control"
+      id="email"
+      placeholder="E-mail"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="kategorie" class="form-label">Kategorie</label>
+    <input
+      [value]="kundeForUpdate.kategorie"
+      type="number"
+      class="form-control"
+      id="kategorie"
+      placeholder="Kategorie"
+    />
+  </div>
+
+  <div class="form-check">
+    <input
+      [checked]="kundeForUpdate.hasNewsletter"
+      class="form-check-input"
+      type="checkbox"
+      value=""
+      id="hasNewsletter"
+    />
+    <label class="form-check-label" for="flexCheckDefault">
+      News letter Abonnieren ?
+    </label>
+  </div>
+
+  <div class="mb-3">
+    <label for="gob" class="form-label">Geburtsdatum</label>
+    <input
+      [value]="geburstdatum"
+      id="geburtsdatum"
+      type="date"
+      class="form-control"
+      placeholder="Geburtsdatum"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="homepage" class="form-label">Homepage</label>
+    <input
+      [value]="kundeForUpdate.homepage"
+      type="text"
+      class="form-control"
+      id="homepage"
+      placeholder="Homepage"
+    />
+  </div>
+
+  <div class="col-md-4">
+    <label for="geschlecht" class="form-label">Geschlecht</label>
+    <select id="geschlecht" class="form-select">
+      <option [selected]="kundeForUpdate.geschlecht?.includes('M')" value="M">
+        Männlich
+      </option>
+      <option [selected]="kundeForUpdate.geschlecht?.includes('W')" value="W">
+        Weiblich
+      </option>
+      <option [selected]="kundeForUpdate.geschlecht?.includes('D')" value="W">
+        Divers
+      </option>
+    </select>
+  </div>
+
+  <div class="col-md-4">
+    <label for="familienstand" class="form-label">Familienstand</label>
+    <select id="familienstand" class="form-select">
+      <option
+        [selected]="kundeForUpdate.familienstand?.includes('L')"
+        value="L"
+      >
+        LEDIG
+      </option>
+      <option
+        [selected]="kundeForUpdate.familienstand?.includes('VH')"
+        value="VH"
+      >
+        VERHEIRATET
+      </option>
+      <option
+        [selected]="kundeForUpdate.familienstand?.includes('G')"
+        value="G"
+      >
+        GESCHIEDEN
+      </option>
+      <option
+        [selected]="kundeForUpdate.familienstand?.includes('VW')"
+        value="VW"
+      >
+        VERWITWET
+      </option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="ort" class="form-label">Ort</label>
+    <input
+      [value]="kundeForUpdate?.adresse?.ort"
+      type="text"
+      class="form-control"
+      id="ort"
+      placeholder="Ort"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="plz" class="form-label">PLZ</label>
+    <input
+      [value]="kundeForUpdate?.adresse?.plz"
+      type="text"
+      class="form-control"
+      id="plz"
+      placeholder="PLZ"
+    />
+  </div>
+
+  <button
+    (click)="handleSubmit($event)"
+    class="btn btn-primary mt-3"
+    type="btn btn-primary"
+  >
+    Speichern
+  </button>
+</div>

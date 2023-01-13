@@ -38,6 +38,8 @@ export class UpdateKundeComponent implements OnInit, OnChanges {
 
     protected routeId: string | null | undefined;
 
+    geburstdatum: string = "";
+
     constructor(
         private readonly readService: KundeReadService,
         private readonly writeService: KundeWriteService,
@@ -90,7 +92,37 @@ export class UpdateKundeComponent implements OnInit, OnChanges {
                 familienstand,
                 adresse,
             };
+
+            this.geburstdatum = this.formatDateForTextField(this.kundeForUpdate.geburtsdatum!);
         });
+    }
+
+    formatDateForTextField(date: Date): string {
+        let day: string = ""
+        let month: string = ""
+
+        switch (true) {
+            case date.getDate() > 0 && date.getDate() < 10:
+                day = '0'.concat(date.getDate().toString())
+                break
+            default:
+                day = date.getDate().toString()
+                break
+        }
+
+        switch (true) {
+            case date.getMonth() === 0:
+                month = "01"
+                break
+            case date.getMonth() > 0 && date.getMonth() < 10:
+                month = '0'.concat(date.getMonth().toString())
+                break
+            default:
+                month = date.getMonth().toString()
+                break
+        }
+
+        return `${date.getFullYear()}-${month}-${day}`
     }
 
     change(event: any) {
@@ -140,6 +172,8 @@ export class UpdateKundeComponent implements OnInit, OnChanges {
         };
 
         this.save(this.kundeForUpdate);
+        alert('Der Kunde wurde erfolgreich upgedated')
+        window.location.href = '/kunden/alle';
     }
 
     ngOnInit(): void {
